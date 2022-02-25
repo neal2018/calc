@@ -12,8 +12,7 @@ const calc = computed(() =>{
     res += lowerWord.charCodeAt(i) - "a".charCodeAt(0) + 1
   }
   return res
-}
-)
+})
 </script>
 
 <template>
