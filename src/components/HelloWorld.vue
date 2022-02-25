@@ -7,8 +7,9 @@ const count = ref(0)
 let word = ref("")
 const calc = computed(() =>{
   let res=0
-  for (let i=0;i<word.value.length;i++) {
-    res += word.value.charCodeAt(i) - "a".charCodeAt(0) + 1
+  let lowerWord = word.value.toLowerCase();
+  for (let i = 0;i < lowerWord.length; i++) {
+    res += lowerWord.charCodeAt(i) - "a".charCodeAt(0) + 1
   }
   return res
 }
