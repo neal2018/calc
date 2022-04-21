@@ -6,9 +6,10 @@ defineProps<{ msg: string }>()
 const count = ref(0)
 let word = ref("")
 const calc = computed(() =>{
-  let res=0
+  let res = 0
   let lowerWord = word.value.toLowerCase();
   for (let i = 0;i < lowerWord.length; i++) {
+    if (lowerWord[i] === " ") continue;
     res += lowerWord.charCodeAt(i) - "a".charCodeAt(0) + 1
   }
   return res
